@@ -1,0 +1,23 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "site d'handicap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://khalilkouiss@bitbucket.org/khalilkouiss/handicap-site.git"
+  },
+  "author": "khalil dev",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/khalilkouiss/handicap-site#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-partials": "^0.3.0",
+    "express-session": "^1.15.6",
+    "firebase-functions": "^1.0.1",
+    "mongoose": "^5.0.11"
+  }
+}
