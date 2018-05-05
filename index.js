@@ -24,7 +24,9 @@ function getFacts(){
 }
 */
 let dirViews =[
-  path.join(__dirname,'./public/views/pages')
+  path.join(__dirname,'./public/views/pages'),
+  path.join(__dirname,'./modal/views/pages'),
+  path.join(__dirname,'./infoPage/views/pages')
 ];
 
 app.use(express.static(__dirname + '/resources'));
@@ -37,12 +39,16 @@ let bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended : true}));
 app.use(bodyParser.json());
 
-console.log('test 1');
 
 let publicRoutes = require('./public/routes');
 app.use(publicRoutes);
 
-console.log('test 2');
+let modalRoutes = require('./modal/routes');
+app.use(modalRoutes);
+
+let infoPageRoutes = require('./infoPage/routes');
+app.use(infoPageRoutes);
+
 
 app.listen(cfgServeur.port);
 console.log("Express server running an "+cfgServeur.port);
